@@ -1,0 +1,17 @@
+# --- Archivos de Secretos ---
+# ¡Ignora el archivo de contraseñas!
+.env
+
+# --- Datos ---
+# Ignora nuestra carpeta de datos, son muy pesados
+data/
+
+# --- Python y Anaconda ---
+# Ignora los archivos de "basura" de Python y Anaconda
+__pycache__/
+.ipynb_checkpoints/
+.conda/
+
+# --- VSC ---
+# Ignora la carpeta de configuración de VSC
+.vscode/

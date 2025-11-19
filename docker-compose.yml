@@ -1,0 +1,30 @@
+# Versión del archivo docker-compose
+version: '3.8'
+
+# Aquí definimos todos nuestros "servicios" o "contenedores"
+services:
+
+  # 1. El servicio de Base de Datos
+  db:
+    image: postgres:15
+    container_name: pg-loan
+    environment:
+      POSTGRES_USER: postgres
+      # Esta es la contraseña que usaremos en DBeaver
+      POSTGRES_PASSWORD: mi-clave-secreta-123
+      POSTGRES_DB: loan_db
+    ports:
+      # --- ¡ESTE ES EL CAMBIO CLAVE! ---
+      # Conectamos el puerto 5433 de tu PC (para evitar al "fantasma")
+      # al puerto 5432 interno del contenedor.
+      - "5433:5432"
+    volumes:
+      # Monta nuestro schema.sql para que se ejecute al crear la BD
+      - ./schema.sql:/docker-entrypoint-initdb.d/init.sql
+
+      # Guarda los datos en un volumen para que no se borren
+      - pgdata:/var/lib/postgresql/data
+
+# Aquí declaramos los volúmenes que usamos
+volumes:
+  pgdata:
