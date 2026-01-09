@@ -1,10 +1,10 @@
-# 💸 Proyecto de Predicción de Default de Préstamos (End-to-End)
+#  Proyecto de Predicción de Default de Préstamos (End-to-End)
 
 ¡Bienvenido! Este es un proyecto completo de Machine Learning que predice el riesgo de default (no pago) de un préstamo. El sistema ingiere datos crudos, los procesa, entrena un modelo de IA y despliega una API y un Dashboard interactivo para realizar predicciones en tiempo real.
 
 ---
 
-## ✨ Características Principales
+##  Características Principales
 
 * **Base de Datos Dockerizada:** La base de datos PostgreSQL corre en un contenedor de Docker (`docker-compose`), haciéndola 100% reproducible.
 * **Pipeline de ETL:** Un script de Python (`src/etl/ingest.py`) extrae, transforma y carga 5,000 registros de préstamos en la base de datos relacional.
@@ -15,7 +15,7 @@
 
 ---
 
-## 🛠️ Stack Tecnológico
+##  Stack Tecnológico
 
 * **Backend & Servidor:** Python, FastAPI, Uvicorn
 * **Frontend (Dashboard):** Streamlit
@@ -26,7 +26,7 @@
 
 ---
 
-## 🏃‍♂️ Cómo Ejecutarlo (Instrucciones)
+##  Cómo Ejecutarlo (Instrucciones)
 
 Este proyecto requiere 3 terminales corriendo simultáneamente (BD, API, Dashboard).
 
